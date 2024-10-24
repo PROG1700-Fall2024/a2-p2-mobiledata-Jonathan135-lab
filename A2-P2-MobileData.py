@@ -10,13 +10,23 @@
 
 def main():
     # YOUR CODE STARTS HERE, each line must be indented (one tab)
+    data_usage = float(input("Enter Data usage(Mb): "))
 
+    if data_usage <= 200:
+        total_charge = 20.0 
+    elif 200 < data_usage <= 500:
+        rate_per_mb = 0.105
+        total_charge = data_usage * rate_per_mb 
+    elif 500 < data_usage <= 1000:
+        rate_per_mb =  0.11
+        total_charge = data_usage * rate_per_mb 
+    else :
+        total_charge = 118.0
+    
 
+    
 
-
-
-
-
+    print(f"Total charge is ${total_charge:.2f}")
 
     # YOUR CODE ENDS HERE
 
